@@ -44,5 +44,5 @@ end
 desc 'Clean up'
 task :clean => [ :clobber_rdoc, :clobber_package ]
 
-desc 'Clean up'
-task :clobber => [ :clean ]
+# desc 'Clean up'
+# task :clobber => [ :clean ]
