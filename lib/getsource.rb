@@ -18,7 +18,7 @@ you should have received a copy of the gnu general public license
 along with getsource.  if not, see <http://www.gnu.org/licenses/>.
 
 =end
-require "getsource_base"
+# require "getsource_base"
 
 class Method
 
