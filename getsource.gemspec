@@ -20,29 +20,29 @@ spec = Gem::Specification.new do |s|
     [ 'AUTHORS', 'CHANGELOG', 'README', 'Rakefile', 'TODO' ]
 end
 
-desc 'Run tests'
-task :default => [ :test ]
+# desc 'Run tests'
+# task :default => [ :test ]
 
-Rake::TestTask.new('test') do |t|
-  t.libs << 'test'
-  t.pattern = '{test}/**/test_*.rb'
-  t.verbose = true
-end
+# Rake::TestTask.new('test') do |t|
+#   t.libs << 'test'
+#   t.pattern = '{test}/**/test_*.rb'
+#   t.verbose = true
+# end
 
-desc 'Generate RDoc'
-Rake::RDocTask.new :rdoc do |rd|
-  rd.rdoc_dir = 'doc'
-  rd.rdoc_files.add 'lib', 'ext', 'README'
-  rd.main = 'README'
-end
+# desc 'Generate RDoc'
+# Rake::RDocTask.new :rdoc do |rd|
+#   rd.rdoc_dir = 'doc'
+#   rd.rdoc_files.add 'lib', 'ext', 'README'
+#   rd.main = 'README'
+# end
 
-desc 'Build Gem'
-Gem::PackageTask.new spec do |pkg|
-  pkg.need_tar = true
-end
+# desc 'Build Gem'
+# Gem::PackageTask.new spec do |pkg|
+#   pkg.need_tar = true
+# end
 
-desc 'Clean up'
-task :clean => [ :clobber_rdoc, :clobber_package ]
+# desc 'Clean up'
+# task :clean => [ :clobber_rdoc, :clobber_package ]
 
-desc 'Clean up'
-task :clobber => [ :clean ]
+# desc 'Clean up'
+# task :clobber => [ :clean ]
